@@ -1,0 +1,4 @@
+name: HomeSystem
+api: 3.0.0
+main: stddaria\homesystem\bootstrap\Loader
+version: 1.1b
