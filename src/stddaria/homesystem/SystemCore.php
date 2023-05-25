@@ -20,7 +20,7 @@ class SystemCore {
         $this->mCommandRegistry = new CommandRegistry( $this );
         $this->mHomeRegistry = new HomeRegistry( $this );
         $this->mEventHandler = new MainEventHandler( $this );
-        $this->mConfig = new LoadedConfig($pLoader->getConfig());
+        $this->mConfig = new LoadedConfig( $pLoader->getConfig() );
     }
 
     public function init(): void {
@@ -31,7 +31,7 @@ class SystemCore {
         $this->mLoader->getServer()->getPluginManager()->registerEvents( $this->mEventHandler, $this->mLoader );
     }
 
-    public function getConfig() : LoadedConfig {
+    public function getConfig(): LoadedConfig {
         return $this->mConfig;
     }
 
