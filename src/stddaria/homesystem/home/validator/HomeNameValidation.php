@@ -8,7 +8,7 @@ class HomeNameValidation {
     /** @var HomeNameValidator[]  */
     private static array $mValidators = [];
 
-    public static function validate(string $str) : ?HomeNameValidator {
+    public static function validate(string $str): ?HomeNameValidator {
         $validator = null;
         foreach(self::$mValidators as $pValidator) {
             if(!$pValidator->validate($str)) {
@@ -19,11 +19,11 @@ class HomeNameValidation {
         return $validator;
     }
 
-    public static function addValidator(HomeNameValidator $validator) : void {
+    public static function addValidator(HomeNameValidator $validator): void {
         self::$mValidators[] = $validator;
     }
 
-    public static function validateHomeName(string $requested) : ?StringComponent {
+    public static function validateHomeName(string $requested): ?StringComponent {
         $validator = self::validate($requested);
         if($validator != null) {
             return new StringComponent($validator->getErrorMessage());
