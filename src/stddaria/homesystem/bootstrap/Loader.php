@@ -12,7 +12,7 @@ class Loader extends PluginBase {
         $this->mSystemCore = new SystemCore( $this );
     }
 
-    public function onEnable() : void {
+    public function onEnable(): void {
         $this->mSystemCore->init();
     }
 
