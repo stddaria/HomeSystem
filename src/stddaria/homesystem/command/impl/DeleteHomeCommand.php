@@ -13,7 +13,7 @@ class DeleteHomeCommand extends SystemCommand {
         parent::__construct( $core, "deletehome", "Удалить точку дома.", "/delhome <НазваниеДома>", [ "delhome" ] );
     }
 
-    public function execute( CommandSender $sender, $commandLabel, array $args ) {
+    public function execute( CommandSender $sender, $commandLabel, array $args ): void {
         if( !$this->check( $sender ) ) {
             return;
         }
